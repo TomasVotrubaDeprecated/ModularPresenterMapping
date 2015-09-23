@@ -1,0 +1,26 @@
+{
+	"name": "zenify/modular-presenter-mapping",
+	"description": "Modularity for presenter mapping in Nette presenter factory.",
+	"license": "MIT",
+	"authors": [
+		{ "name": "Tomas Votruba", "homepage": "http://tomasvotruba.cz", "email": "tomas.vot@gmail.com" }
+	],
+	"require": {
+		"php": ">=5.6",
+		"nette/application": "~2.3",
+		"tracy/tracy": "~2.3"
+	},
+	"require-dev": {
+		"nette/bootstrap": "~2.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Zenify\\ModularPresenterMapping\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Zenify\\ModularPresenterMapping\\Tests\\": "tests"
+		}
+	}
+}

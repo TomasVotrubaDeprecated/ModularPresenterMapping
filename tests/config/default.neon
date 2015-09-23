@@ -1,0 +1,11 @@
+application:
+	scanDirs: FALSE
+	scanComposer: FALSE
+
+
+services:
+	- Zenify\ModularPresenterMapping\Tests\DI\ModularPresenterMappingSource\PresenterMappingProvider
+
+
+extensions:
+	- Zenify\ModularPresenterMapping\DI\ModularPresenterMappingExtension
