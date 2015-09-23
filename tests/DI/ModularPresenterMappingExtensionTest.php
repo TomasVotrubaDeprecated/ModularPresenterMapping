@@ -40,10 +40,20 @@ final class ModularPresenterMappingExtensionTest extends PHPUnit_Framework_TestC
 		$containerBuilder->prepareClassList();
 		$this->extension->beforeCompile();
 
-		$presenterFactoryDefinition = $containerBuilder->getDefinition($containerBuilder->getByType(IPresenterFactory::class));
+		$presenterFactoryDefinition = $this->getPresenterFactoryDefinition();
 		$setup = $presenterFactoryDefinition->getSetup();
 		$this->assertSame('setMapping', $setup[0]->getEntity());
 		$this->assertInstanceOf(Statement::class, $setup[0]->arguments[0]);
+	}
+
+
+	/**
+	 * @return mixed
+	 */
+	private function getPresenterFactoryDefinition()
+	{
+		$containerBuilder = $this->extension->getContainerBuilder();
+		return $containerBuilder->getDefinition($containerBuilder->getByType(IPresenterFactory::class));
 	}
 
 }
